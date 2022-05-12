@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        tools:ignore="UnusedAttribute">
+
+        <TextView
+            android:id="@+id/first"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S" />
+        <TextView
+            android:id="@+id/second"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="o" />
+        <TextView
+            android:id="@+id/third"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="g‘" />
+        <TextView
+            android:id="@+id/forth"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="l" />
+        <TextView
+            android:id="@+id/fifth"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="o" />
+        <TextView
+            android:id="@+id/sixth"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="m" />
+        <TextView
+            android:id="@+id/space"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" " />
+        <TextView
+            android:id="@+id/seventh"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="b" />
+        <TextView
+            android:id="@+id/eighth"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="o" />
+        <TextView
+            android:id="@+id/ninth"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="l" />
+        <TextView
+            android:id="@+id/tenth"
+            style="@style/TextSplash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/blueSky"
+        app:layout_constraintBottom_toBottomOf="@id/kidsLottie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/kidsLottie"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/kids"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/sunLottie"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sun_one"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/greenGrass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

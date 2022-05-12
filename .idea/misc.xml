@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable-v24/save_selector.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/article_background_bookmark.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/article_type_background_bookmark.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/article_type_background_home.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/body_scale.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark.xml" value="0.2475" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark_background.xml" value="0.1225" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark_blue.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark_blue_empty.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark_dark_gray.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark_darkgray.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark_empty.xml" value="0.2475" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark_empty_blue.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/bookmark_filledbookmark_blue.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/btn_item_nav_background.xml" value="0.145" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/btn_nav_background.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/cardview_back.xml" value="0.154" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/category_background.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/health_menu_selector.xml" value="0.1595" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/health_selector.xml" value="0.1595" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/heart.xml" value="0.1595" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/heart_empty.xml" value="0.1595" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/heart_selector.xml" value="0.1595" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/home.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/home_article_background.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/home_article_type_background.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/home_empty.xml" value="0.176" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/home_selector.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/img_color_blur.xml" value="0.192" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/logo_circle.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/logo_rectangle.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/menu.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/menu_empty.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/menu_selector.xml" value="0.145" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/save.xml" value="0.176" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/save_empty.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/save_selector.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/scale.xml" value="0.178" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/scroll_thumb.xml" value="0.1225" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/search.xml" value="0.152" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/search_empty.xml" value="0.152" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/search_selector.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/setting.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/setting_empty.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/drawable/setting_selector.xml" value="0.2045" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/font/alata.xml" value="0.21328125" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/font/cantora_one.xml" value="0.21328125" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout-v21/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/activity_splash.xml" value="0.190625" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/health.xml" value="0.2" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/item_article.xml" value="0.176" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/item_article_full.xml" value="0.12708333333333333" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/item_bookmark_article.xml" value="0.2" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/item_category.xml" value="0.264" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/item_group_article.xml" value="0.176" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/item_home_article.xml" value="0.2966507177033493" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/item_menu_article.xml" value="0.176" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/setting.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/ui_health.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/ui_home.xml" value="0.176" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/ui_save.xml" value="0.190625" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/layout/ui_search.xml" value="0.190625" />
+        <entry key="..\:/Programming/PDP/HealthyChild/app/src/main/res/menu/bottom_nav_menu.xml" value="0.190625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

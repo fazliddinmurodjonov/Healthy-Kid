@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sog‘lom bola</string>
+    <string name="healthy_boy">Sog‘lom bola</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="articleTitle">Mobil telefon va Wi-Fi\'dan foydalanish homilaning nobud bo‘lish xavfini oshiradi.</string>
+    <string name="bmi_calculator">TANA MASSASI INDEKSINI HISOBLASH KALKUYATORI</string>
+</resources>
