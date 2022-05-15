@@ -3,10 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_kids.xml"
-    app:startDestination="@id/home2">
+    app:startDestination="@id/home">
     <fragment
-        android:id="@+id/home2"
+        android:id="@+id/home"
         android:name="com.fragments.Home"
-        android:label="home"
-        tools:layout="@layout/home" />
+        android:label="Uy"
+        tools:layout="@layout/home" >
+        <action
+            android:id="@+id/action_home_to_article"
+            app:destination="@id/article" />
+    </fragment>
+    <fragment
+        android:id="@+id/article"
+        android:name="com.fragments.Article"
+        android:label="article"
+        tools:layout="@layout/article" />
+    <fragment
+        android:id="@+id/bookmark"
+        android:name="com.fragments.Bookmark"
+        android:label="Tanlanganlar"
+        tools:layout="@layout/bookmark" >
+        <action
+            android:id="@+id/action_bookmark_to_article"
+            app:destination="@id/article" />
+    </fragment>
+    <fragment
+        android:id="@+id/health"
+        android:name="com.fragments.Health"
+        android:label="Salomatlik"
+        tools:layout="@layout/health" />
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.fragments.Menu"
+        android:label="Menyu"
+        tools:layout="@layout/menu" />
+    <fragment
+        android:id="@+id/bmi"
+        android:name="com.fragments.bmi"
+        android:label="bmi"
+        tools:layout="@layout/bmi" />
+    <fragment
+        android:id="@+id/bmi_result"
+        android:name="com.fragments.bmi_result"
+        android:label="bmi_result"
+        tools:layout="@layout/bmi_result" />
 </navigation>

@@ -4,5 +4,22 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="articleTitle">Mobil telefon va Wi-Fi\'dan foydalanish homilaning nobud bo‘lish xavfini oshiradi.</string>
-    <string name="bmi_calculator">TANA MASSASI INDEKSINI HISOBLASH KALKUYATORI</string>
+    <string name="bmi_calculator">Tana massasi indeksni hisoblash kalkuyatori</string>
+    <string name="your_bmi">Tana massasi indeksingiz:</string>
+    <string name="under_weight">Sizda vazn yetishmasligi mavjud!</string>
+    <string name="normal_weight">Sizning vazningiz normal holatda!</string>
+    <string name="over_weight">Sizda vazn ortiqchaligi mavjud!</string>
+    <string name="advices">Vazningizni saqlab turishga yordam beruvchi maslahatlar</string>
+    <string name="under_first">Ovqatdan oldin suv ichmang</string>
+    <string name="under_second">Kattaroq likopchalardan foydalaning</string>
+    <string name="under_third">Yetarlicha uxlang</string>
+    <string name="normal_first">Faollingizni saqlang</string>
+    <string name="normal_second">Sog‘lom ovqatlarni tanavul qiling va o‘zingiz tayyorlang</string>
+    <string name="normal_third">Dam olish va uyquga e’tibor qarating</string>
+    <string name="pregnancy">Amerikalik tadqiqotchilar Wi-Fi va mobil telefonlardan foydalanish farzand kutayotgan ayollarda homilaning nobud bo‘lish xavfini taxminan 50 foizga oshiradi degan xulosaga kelishdi. Mutaxassislarning so‘zlariga ko‘ra, qurilmalarning homilador ayollar organizmiga salbiy ta’siri sababi magnit maydonining nurlanishidadir.
+
+AQSh hududida o‘tkazilgan tadqiqot davomida homilasini yo‘qotgan ayollarning taxminan yarmi doimiy ravishda smartfondan foydalangani aniqlandi. Telefon tarmoqni izlash davomida tegishli jihozlar tomonidan qayd etilmaydigan past kuchlanishli radiatsion maydonni hosil qiladi. U butun organizm faoliyatiga ta’sir ko‘rsatadi.
+
+"Homila tushishi AQShdagi homiladorlik holatlarining 15-20 foizida kuzatiladi. Bu jahon miqyosidagi muammo hisoblanadi, zero bunday ko‘rsatkichlar butun sayyorada qayd etilmoqda. Bo‘lg‘usi onani homilaning nobud bo‘lishi va boshqa tahdidlardan xavfsizlantirish uchun nafaqat u smartfon va boshqa portativ gadjetlardan foydalanishdan voz kechishi, balki yaqin atrofidagi kishilardan ham shuni so‘rashi kerak", - deyishmoqda tadqiqotchilar. Olimlarning fikricha, bunday ta’sirdan boshqa yo‘llar bilan qutulishning iloji yo‘q.
+</string>
 </resources>

@@ -1,62 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:scrollbarThumbVertical="@drawable/scroll_thumb"
-    tools:ignore="MissingConstraints">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/articleTitle"
-            style="@style/TextStyle"
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/background_back_btn"
+            android:paddingEnd="3dp"
+            android:src="@drawable/back"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.like.LikeButton
+            android:id="@+id/bookmark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/articleTitle"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:elevation="15dp"
+            app:circle_end_color="@color/blueSky"
+            app:circle_start_color="@color/blueSky"
+            app:dots_primary_color="@color/blue"
+            app:dots_secondary_color="@color/blue"
+            app:icon_size="22dp"
+            app:layout_constraintBottom_toBottomOf="@id/bookmarkView"
+            app:layout_constraintEnd_toEndOf="@id/bookmarkView"
+            app:layout_constraintStart_toStartOf="@id/bookmarkView"
+            app:layout_constraintTop_toTopOf="@id/bookmarkView"
+            app:like_drawable="@drawable/bookmark_white"
+            app:unlike_drawable="@drawable/bookmark_empty_blue"
             tools:ignore="MissingConstraints" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:cardPreventCornerOverlap="true"
-            app:cardUseCompatPadding="true">
+        <View
+            android:id="@+id/bookmarkView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background_view_of_bookmark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/articleImg"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbarThumbVertical="@drawable/scroll_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionBarLayout"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/articleTitle"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/articleTitle"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:id="@+id/articleImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pregnancy_one"
+                    tools:ignore="MissingConstraints" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/articleText"
+                style="@style/TextStyle"
+                android:text="@string/pregnancy"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/pregnancy_one"
-                tools:ignore="MissingConstraints" />
-        </androidx.cardview.widget.CardView>
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="5dp"
+                android:textSize="18sp" />
 
-
-        <TextView
-            android:id="@+id/articleText"
-            style="@style/TextStyle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:justificationMode="inter_word"
-            android:lineSpacingExtra="5dp"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

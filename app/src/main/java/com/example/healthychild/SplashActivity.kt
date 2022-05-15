@@ -35,35 +35,35 @@ class SplashActivity : AppCompatActivity(R.layout.activity_splash) {
         with(binding) {
             handler.postDelayed({
                 first.setTextColor(Color.WHITE)
-            }, 300)
+            }, 350)
             handler.postDelayed({
                 second.setTextColor(Color.WHITE)
-            }, 400)
+            }, 450)
             handler.postDelayed({
                 third.setTextColor(Color.WHITE)
-            }, 500)
+            }, 550)
             handler.postDelayed({
                 forth.setTextColor(Color.WHITE)
-            }, 600)
+            }, 650)
             handler.postDelayed({
                 fifth.setTextColor(Color.WHITE)
-            }, 700)
+            }, 750)
             handler.postDelayed({
                 sixth.setTextColor(Color.WHITE)
-            }, 800)
+            }, 850)
 
             handler.postDelayed({
                 seventh.setTextColor(Color.WHITE)
-            }, 900)
+            }, 950)
             handler.postDelayed({
                 eighth.setTextColor(Color.WHITE)
-            }, 1000)
+            }, 1050)
             handler.postDelayed({
                 ninth.setTextColor(Color.WHITE)
-            }, 1100)
+            }, 1150)
             handler.postDelayed({
                 tenth.setTextColor(Color.WHITE)
-            }, 1200)
+            }, 1250)
         }
     }
 }

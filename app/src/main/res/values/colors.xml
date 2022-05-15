@@ -3,20 +3,21 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">@color/white</color>
     <color name="purple_700">@color/blueSky</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_200">@color/blueSky</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blueSky">#b9e3ed</color>
+    <color name="blueSky">#c3e7ff</color>
     <color name="greenGrass">#8cd850</color>
-    <color name="lightGreen">#9fbe55</color>
     <color name="darkGreen">#47572a</color>
     <color name="rippleColor">#76974a</color>
     <color name="blue">#0CB1C4</color>
     <color name="pink">#EE3485</color>
-    <color name="yellow">#FECF07</color>
-    <color name="darkGray">#35414b</color>
-    <color name="emptyIconColor">#6c7c84</color>
+    <color name="darkGray">#011c35</color>
+    <color name="emptyIconColor">#4d4d4e</color>
     <color name="darkBlue">#80428BA4</color>
     <color name="lightGray">#bbbcbc</color>
+    <color name="green">#2abb9a</color>
+    <color name="yellow">#f4d648</color>
+    <color name="red">#f44b3e</color>
 </resources>
