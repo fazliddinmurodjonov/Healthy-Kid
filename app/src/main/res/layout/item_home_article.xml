@@ -31,7 +31,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/article_background_home"
+                android:background="@drawable/category_background"
                 android:elevation="1dp" />
 
             <View
@@ -70,38 +70,41 @@
                 android:src="@drawable/health_bmi"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
-                android:id="@+id/articleTypeBtn"
+                android:id="@+id/articleCategoryBtn"
                 style="@style/TextStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"
+                android:layout_height="26dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/article_type_background_home"
-                android:paddingTop="0dp"
-                android:paddingBottom="0dp"
                 android:paddingStart="5dp"
-                android:paddingEnd="5dp"                android:textStyle="bold"
-                android:text="Salomatlik"
+                android:paddingTop="0dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="0dp"
+                android:text="@string/salomatlik"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="12sp"
+                android:textStyle="bold"
                 app:backgroundTint="@null"
-                app:layout_constraintBottom_toTopOf="@id/articleText"
+                app:layout_constraintBottom_toTopOf="@id/articleTitle"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/articleText"
+                android:id="@+id/articleTitle"
                 style="@style/TextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
                 android:elevation="1dp"
-                android:justificationMode="inter_word"
+                android:justificationMode="none"
                 android:lineSpacingExtra="2dp"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"

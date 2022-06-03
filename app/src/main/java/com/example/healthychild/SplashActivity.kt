@@ -8,17 +8,24 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.widget.Toast
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.healthychild.databinding.ActivitySplashBinding
+import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QueryDocumentSnapshot
+import com.room.database.HealthyChildDatabase
+import com.room.entity.Article
+import com.utils.LoadDataFromFireStore
 
 class SplashActivity : AppCompatActivity(R.layout.activity_splash) {
     private val binding: ActivitySplashBinding by viewBinding()
     var healthyChild = arrayOf("S", "o", "g‘", "l", "o", "m", " ", "b", "o", "l", "a")
-    var index = 0
-
+    lateinit var fireStore: FirebaseFirestore
     lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         handler = Handler(Looper.getMainLooper())
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
@@ -27,9 +34,10 @@ class SplashActivity : AppCompatActivity(R.layout.activity_splash) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2200)
+        }, 2000)
         animationText()
     }
+
 
     private fun animationText() {
         with(binding) {

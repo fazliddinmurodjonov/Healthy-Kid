@@ -1,0 +1,173 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.fragments.Bmi">
+
+    <ImageView
+        android:id="@+id/bodyScaleImg"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/body_scale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintBottom_toTopOf="@id/fieldsLayout"
+        android:id="@+id/bmi"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/bmi_calculator"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bodyScaleImg"
+        tools:ignore="MissingConstraints" />
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/fieldsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/bmi"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/weightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bmi"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/weightImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/scale"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Tana vazni (kg)"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/weightEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/andada"
+            android:inputType="number"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/background_edit_text"
+            android:hint="kg"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textColorHint="@color/lightGray"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-41dp"
+            tools:layout_editor_absoluteY="2dp" />
+
+        <LinearLayout
+            android:id="@+id/heightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/heightImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/measure_height"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                style="@style/TextStyle"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Bo‘y (sm)"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/heightEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/background_edit_text"
+            android:hint="sm"
+            android:fontFamily="@font/andada"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:textColorHint="@color/lightGray"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_button"
+        android:fontFamily="@font/andada"
+        android:text="Hisoblash"
+        app:layout_constraintVertical_bias="0.25"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fieldsLayout"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

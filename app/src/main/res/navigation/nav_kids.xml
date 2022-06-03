@@ -2,49 +2,76 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_kids.xml"
+    android:id="@+id/nav_kids"
     app:startDestination="@id/home">
     <fragment
         android:id="@+id/home"
         android:name="com.fragments.Home"
         android:label="Uy"
-        tools:layout="@layout/home" >
+        tools:layout="@layout/home">
         <action
-            android:id="@+id/action_home_to_article"
+            android:id="@+id/action_home_to_article2"
             app:destination="@id/article" />
     </fragment>
     <fragment
         android:id="@+id/article"
         android:name="com.fragments.Article"
-        android:label="article"
+        android:label=""
         tools:layout="@layout/article" />
     <fragment
         android:id="@+id/bookmark"
         android:name="com.fragments.Bookmark"
         android:label="Tanlanganlar"
-        tools:layout="@layout/bookmark" >
+        tools:layout="@layout/bookmark">
         <action
             android:id="@+id/action_bookmark_to_article"
+            app:destination="@id/article" />
+        <action
+            android:id="@+id/action_bookmark_to_article2"
             app:destination="@id/article" />
     </fragment>
     <fragment
         android:id="@+id/health"
         android:name="com.fragments.Health"
         android:label="Salomatlik"
-        tools:layout="@layout/health" />
+        tools:layout="@layout/health">
+        <action
+            android:id="@+id/action_health_to_bmi"
+            app:destination="@id/bmi" />
+    </fragment>
     <fragment
         android:id="@+id/menu"
         android:name="com.fragments.Menu"
         android:label="Menyu"
-        tools:layout="@layout/menu" />
+        tools:layout="@layout/menu">
+        <action
+            android:id="@+id/action_menu_to_articleOfCategory"
+            app:destination="@id/articleOfCategory" />
+    </fragment>
     <fragment
         android:id="@+id/bmi"
-        android:name="com.fragments.bmi"
-        android:label="bmi"
-        tools:layout="@layout/bmi" />
+        android:name="com.fragments.Bmi"
+        android:label="Tana massasi indeksi"
+        tools:layout="@layout/bmi">
+        <action
+            android:id="@+id/action_bmi_to_bmi_result"
+            app:destination="@id/bmi_result" />
+    </fragment>
     <fragment
         android:id="@+id/bmi_result"
         android:name="com.fragments.bmi_result"
         android:label="bmi_result"
         tools:layout="@layout/bmi_result" />
+    <fragment
+        android:id="@+id/articleOfCategory"
+        android:name="com.fragments.ArticleOfCategory"
+        android:label=""
+        tools:layout="@layout/article_of_category">
+        <action
+            android:id="@+id/action_articleOfCategory_to_article4"
+            app:destination="@id/article" />
+        <action
+            android:id="@+id/action_articleOfCategory_to_article"
+            app:destination="@id/article" />
+    </fragment>
 </navigation>

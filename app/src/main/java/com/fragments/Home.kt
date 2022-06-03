@@ -1,86 +1,115 @@
 package com.fragments
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Base64
-import android.util.Base64.encodeToString
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.adapters.HomeArticleAdapter
+import com.example.App
 import com.example.healthychild.R
 import com.example.healthychild.databinding.HomeBinding
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
 import com.room.database.HealthyChildDatabase
 import com.room.entity.Article
-import java.io.ByteArrayOutputStream
+import com.room.entity.ArticleFavourite
+import com.room.entity.Categories
+import com.utils.ArticleFavouriteManage
+import com.utils.LoadDataFromFireStore
+import com.utils.NetworkHelper
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.*
-import kotlin.collections.ArrayList
 
 class Home : Fragment(R.layout.home) {
     private val binding: HomeBinding by viewBinding()
-    lateinit var firebaseFireStore: FirebaseFirestore
-    lateinit var firebaseStorage: FirebaseStorage
-    lateinit var reference: StorageReference
-    lateinit var healthyChildDatabase: HealthyChildDatabase
-    lateinit var articleList: ArrayList<Article>
+    var db = HealthyChildDatabase.getInstance(App.instance)
+    private var articleList = db.articleDao().getAllArticles().shuffled()
+    private val homeAdapter: HomeArticleAdapter = HomeArticleAdapter()
+    private lateinit var handler: Handler
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        healthyChildDatabase = HealthyChildDatabase.getInstance(requireContext())
-        firebaseFireStore = FirebaseFirestore.getInstance()
-        articleList = ArrayList()
-        firebaseStorage = FirebaseStorage.getInstance()
-        reference = firebaseStorage.getReference("category")
-//        reference = firebaseStorage.getReference("health")
-//        firebaseFireStore.collection("health")
-//            .get()
-//            .addOnCompleteListener {
-//                if (it.isSuccessful) {
-//                    val result = it.result
-//                    for (queryDocumentSnapshot in result) {
-//                        val category = queryDocumentSnapshot.toObject(Article::class.java)
-//                        articleList.add(category)
-//                    }
-//
-//                    var article = Article(articleList[0].articleImg.toString())
-//                    healthyChildDatabase.articleDao().insertArticle(article)
-//                    // binding.tv.text = articleList[0].articleText
-//                    //Toast.makeText(requireContext(), "${articleList[0].articleImg}", Toast.LENGTH_SHORT).show()
-//
-//
-////                    Picasso.get()
-////                        .load(articleList[2].categoryImg.toString())
-////                        .into(binding.articleImg)
-//                }
-//            }
-
-        val ONE_MEGABYTE: Long = 1024 * 1024
-        reference.getBytes(ONE_MEGABYTE).addOnSuccessListener {
-            // Data for "images/island.jpg" is returned, use this as needed
-            var str = ""
-
-            var bitmap = BitmapFactory.decodeByteArray(it, 0, it.size)
-            bitmap.apply {
-                str = toBase64String()
-            }
-//            val toString = bitmap.toString()
-//            binding.articleImg.setImageBitmap(bitmap)
-//            Toast.makeText(requireContext(), "${toString}", Toast.LENGTH_SHORT).show()
-            var article = Article(str)
-            healthyChildDatabase.articleDao().insertArticle(article)
-            Toast.makeText(requireContext(), "${str.length}", Toast.LENGTH_SHORT).show()
-        }.addOnFailureListener {
-            // Handle any errors
+        super.onViewCreated(view, savedInstanceState)
+        handler = Handler(Looper.getMainLooper())
+        homeAdapter.submitList(articleList)
+        binding.homeArticleRV.adapter = homeAdapter
+        for (article in articleList) {
+            val a = db.articleDao().getArticleById(article.id!!)
+            article.favourite = a.favourite
         }
-
+        if (db.articleDao().getAllArticles().isEmpty()) {
+            handler.postDelayed(runnable, 0)
+        }
+        binding.swipeHome.setOnRefreshListener {
+            val runnable = Runnable {
+                if (articleList.isEmpty()) {
+                    articleList = db.articleDao().getAllArticles().shuffled()
+                    homeAdapter.submitList(articleList)
+                }
+                binding.swipeHome.isRefreshing = false
+            }
+            handler.postDelayed(runnable, 150)
+            binding.swipeHome.setColorSchemeResources(
+                R.color.blue,
+            )
+        }
+        adapterClick()
     }
 
-    fun Bitmap.toBase64String(): String {
-        ByteArrayOutputStream().apply {
-            compress(Bitmap.CompressFormat.PNG, 10, this)
-            return Base64.encodeToString(toByteArray(), Base64.DEFAULT)
+    private fun adapterClick() {
+        homeAdapter.setOnCategoryClickListener { categoryId ->
+            val bundle = bundleOf("categoryId" to categoryId)
+            findNavController().navigate(R.id.articleOfCategory, bundle)
         }
+        homeAdapter.setOnItemClickListener { articleId ->
+            val bundle = bundleOf("articleId" to articleId)
+            findNavController().navigate(R.id.article, bundle)
+        }
+        homeAdapter.setOnFavouriteClickListener { favourite, a ->
+            if (favourite == 1) {
+                a.favourite = 1
+                db.articleDao().updateArticle(a)
+                val articleFavourite =
+                    ArticleFavourite(a.id, a.title, a.text, a.image, a.favourite, a.categoryId)
+                ArticleFavouriteManage.insertArticle(articleFavourite)
+            } else {
+                a.favourite = 0
+                db.articleDao().updateArticle(a)
+                val articleFavourite = ArticleFavouriteManage.getArticleFavourite(a.id!!)
+                ArticleFavouriteManage.deleteArticle(articleFavourite)
+            }
+        }
+    }
+
+    private var runnable = object : Runnable {
+        override fun run() {
+            if (db.articleDao().getAllArticles().isNotEmpty()) {
+                handler.removeCallbacks(this)
+                articleList = db.articleDao().getAllArticles().shuffled()
+                homeAdapter.submitList(articleList)
+
+            } else {
+                handler.postDelayed(this, 0)
+            }
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+//        if (db.articleDao().getAllArticles().isNotEmpty()) {
+//            articleList = db.articleDao().getAllArticles().shuffled()
+//            homeAdapter.submitList(articleList)
+//        }
+        homeAdapter.submitList(articleList)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        handler.removeCallbacks(runnable)
     }
 }
