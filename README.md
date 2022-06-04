@@ -1,5 +1,5 @@
 # Healthy Kid
-<h4>This app is useful for all ages mothers. They can find some types of articles. It has lots of features. I have used to Firestore Database and Storage.<h4>
+<h4>This app is useful for all ages mothers. They can find some types of articles. It has lots of features. I have used to Firestore Database and Storage in this app.<h4>
 
 <img src="images/1.png" width = "270" > <img src="images/2.png" width = "270" > <img src="images/3.png" width = "270" >
 <img src="images/4.png" width = "270" > <img src="images/5.png" width = "270" > <img src="images/6.png" width = "270" >
