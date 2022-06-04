@@ -8,12 +8,7 @@
 
 
 
-/*https://user-images.githubusercontent.com/77713867/171986720-7b0718fa-b43c-4b91-a4cb-7997774a31aa.mp4*/
-
-<video autoplay loop style="width:100%; height: auto; position:absolute; z-index: -1;">
-  <source src="images/video.mp4" type="video/mp4" />
-  <img src="images/1.jpg">
-</video>
+https://user-images.githubusercontent.com/77713867/171986720-7b0718fa-b43c-4b91-a4cb-7997774a31aa.mp4
   
 # Icons
 
