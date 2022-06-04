@@ -5,13 +5,22 @@
 <img src="images/4.png" width = "270" > <img src="images/5.png" width = "270" > <img src="images/6.png" width = "270" >
 <img src="images/7.png" width = "270" > <img src="images/8.png" width = "270" > <img src="images/9.png" width = "270" >
 <img src="images/10.png" width = "270" > <img src="images/11.png" width = "270" > <img src="images/12.png" width = "270" >
+
+
+
+/*https://user-images.githubusercontent.com/77713867/171986720-7b0718fa-b43c-4b91-a4cb-7997774a31aa.mp4*/
+
+<video autoplay loop style="width:100%; height: auto; position:absolute; z-index: -1;">
+  <source src="images/video.mp4" type="video/mp4" />
+  <img src="images/1.jpg">
+</video>
   
 # Icons
 
 <h3>I made icon for this app.<h3>
 
-<img src="images/icon_rectangle.png" witdh = "150">
-<img src="images/icon_circle.png" witdh = "150">
+<img src="images/icon_rectangle.png" width = "150">
+<img src="images/icon_circle.png" width = "150">
 
 # Resources:
   
