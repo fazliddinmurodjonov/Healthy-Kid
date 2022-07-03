@@ -14,8 +14,8 @@ https://user-images.githubusercontent.com/77713867/171986720-7b0718fa-b43c-4b91-
 
 <h3>I made icon for this app.<h3>
 
-<img src="images/icon_rectangle.png" width = "150">
-<img src="images/icon_circle.png" width = "150">
+<img src="images/icon_rectangle.png" width = "200">
+<img src="images/icon_circle.png" width = "200">
 
 # Resources:
   
